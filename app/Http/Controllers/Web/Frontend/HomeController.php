@@ -33,6 +33,16 @@ class HomeController extends Controller
         return view('web.frontend.sections.career');
     }
 
+    public function marketplace()
+    {
+        return view('web.frontend.sections.marketplace');
+    }
+
+    public function feedback()
+    {
+        return view('web.frontend.sections.feedback');
+    }
+
     public function create()
     {
         //

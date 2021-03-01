@@ -185,8 +185,8 @@
                                 <li class="sub-link"><a href="javascript:void(0)">Job Placement</a>
                                     <ul class="sub-menu">
                                         <li><a href="{{ route('career') }}">Freelancing Career</a></li>
-                                        <li><a href="marketplace.php">MarketPlace Related</a></li>
-                                        <li><a href="feedback.php">Students Feedback</a></li>
+                                        <li><a href="{{ route('marketplace') }}">MarketPlace Related</a></li>
+                                        <li><a href="{{ route('feedback') }}">Students Feedback</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="blog.php">Blog</a></li>

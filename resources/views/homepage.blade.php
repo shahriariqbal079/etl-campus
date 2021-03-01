@@ -1,8 +1,5 @@
 @extends('web.frontend.layouts.master')
-
 @section('content')
-
-
     <!--Slider area start-->
     <section class="etl-main-slider-area-start owl-carousel owl-theme">
         <!--Single slider area start-->
