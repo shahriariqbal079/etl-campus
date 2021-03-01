@@ -177,7 +177,7 @@
                                 <li><a href="javascript:void(0)">Course</a></li>
                                 <li class="sub-link"><a href="javascript:void(0)">Admission</a>
                                     <ul class="sub-menu">
-                                        <li><a href="procedure.php">Admission Procedure</a></li>
+                                        <li><a href="{{route('admission-procedure')}}">Admission Procedure</a></li>
                                         <li><a href="javascript:void(0)">Admission Form</a></li>
                                         <li><a href="result.php">Admission Result</a></li>
                                     </ul>
