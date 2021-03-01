@@ -43,6 +43,16 @@ class HomeController extends Controller
         return view('web.frontend.sections.feedback');
     }
 
+    public function blog()
+    {
+        return view('web.frontend.sections.blog');
+    }
+
+    public function faq()
+    {
+        return view('web.frontend.sections.faq');
+    }
+
     public function create()
     {
         //

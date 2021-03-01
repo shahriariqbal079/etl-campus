@@ -9,6 +9,8 @@ Route::get('/admission-result', 'Web\Frontend\HomeController@admissionResult')->
 Route::get('/career', 'Web\Frontend\HomeController@career')->name('career');
 Route::get('/marketplace', 'Web\Frontend\HomeController@marketplace')->name('marketplace');
 Route::get('/feedback', 'Web\Frontend\HomeController@feedback')->name('feedback');
+Route::get('/blog', 'Web\Frontend\HomeController@blog')->name('blog');
+Route::get('/faq', 'Web\Frontend\HomeController@faq')->name('faq');
 
 Auth::routes();
 
