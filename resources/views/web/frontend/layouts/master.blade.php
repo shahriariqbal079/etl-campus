@@ -173,7 +173,7 @@
                         <div class="etl-navigation-area">
                             <ul class="etl-main-menu">
                                 <li class="active"><a href="javascript:void(0)">Home</a></li>
-                                <li><a href="about.php">About</a></li>
+                                <li><a href="{{route('about')}}">About</a></li>
                                 <li><a href="javascript:void(0)">Course</a></li>
                                 <li class="sub-link"><a href="javascript:void(0)">Admission</a>
                                     <ul class="sub-menu">

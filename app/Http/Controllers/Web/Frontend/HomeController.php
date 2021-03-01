@@ -13,6 +13,11 @@ class HomeController extends Controller
         return view('homepage');
     }
 
+    public function about()
+    {
+        return view('web.frontend.sections.about');
+    }
+
     public function create()
     {
         //
