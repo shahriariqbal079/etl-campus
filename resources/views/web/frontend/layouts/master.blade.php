@@ -173,18 +173,18 @@
                         <div class="etl-navigation-area">
                             <ul class="etl-main-menu">
                                 <li class="active"><a href="javascript:void(0)">Home</a></li>
-                                <li><a href="{{route('about')}}">About</a></li>
+                                <li><a href="{{ route('about') }}">About</a></li>
                                 <li><a href="javascript:void(0)">Course</a></li>
                                 <li class="sub-link"><a href="javascript:void(0)">Admission</a>
                                     <ul class="sub-menu">
-                                        <li><a href="{{route('admission-procedure')}}">Admission Procedure</a></li>
+                                        <li><a href="{{ route('admission-procedure') }}">Admission Procedure</a></li>
                                         <li><a href="javascript:void(0)">Admission Form</a></li>
-                                        <li><a href="result.php">Admission Result</a></li>
+                                        <li><a href="{{ route('admission-result') }}">Admission Result</a></li>
                                     </ul>
                                 </li>
                                 <li class="sub-link"><a href="javascript:void(0)">Job Placement</a>
                                     <ul class="sub-menu">
-                                        <li><a href="career.php">Freelancing Career</a></li>
+                                        <li><a href="{{ route('career') }}">Freelancing Career</a></li>
                                         <li><a href="marketplace.php">MarketPlace Related</a></li>
                                         <li><a href="feedback.php">Students Feedback</a></li>
                                     </ul>

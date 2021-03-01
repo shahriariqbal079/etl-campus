@@ -17,9 +17,20 @@ class HomeController extends Controller
     {
         return view('web.frontend.sections.about');
     }
-    public function admissionProcedure () {
-        return view('web.frontend.sections.admission-procedure');
 
+    public function admissionProcedure()
+    {
+        return view('web.frontend.sections.admission-procedure');
+    }
+
+    public function admissionResult()
+    {
+        return view('web.frontend.sections.admission-result');
+    }
+
+    public function career()
+    {
+        return view('web.frontend.sections.career');
     }
 
     public function create()

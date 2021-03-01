@@ -106,8 +106,8 @@
                 <div class="col-md-3">
                     <div class="etl-single-course-content">
                         <div class="etl-course-image">
-                            <a href="javascript:void(0)"><img src="{{ asset('frontend/images/mainSliders/slider2.jpeg') }}"
-                                    alt="Web Design"></a>
+                            <a href="javascript:void(0)"><img
+                                    src="{{ asset('frontend/images/mainSliders/slider2.jpeg') }}" alt="Web Design"></a>
                         </div>
                         <div class="etl-course-body">
                             <a href="javascript:void(0)" class="etl-course-title">Website Design</a>
@@ -222,8 +222,8 @@
                 <div class="col-md-3">
                     <div class="etl-single-course-content">
                         <div class="etl-course-image">
-                            <a href="javascript:void(0)"><img src="{{ asset('frontend/images/mainSliders/slider2.jpeg') }}"
-                                    alt="Web Design"></a>
+                            <a href="javascript:void(0)"><img
+                                    src="{{ asset('frontend/images/mainSliders/slider2.jpeg') }}" alt="Web Design"></a>
                         </div>
                         <div class="etl-course-body">
                             <a href="javascript:void(0)" class="etl-course-title">Interior Design</a>
@@ -280,8 +280,8 @@
                 <div class="col-md-3">
                     <div class="etl-single-course-content">
                         <div class="etl-course-image">
-                            <a href="javascript:void(0)"><img src="{{ asset('frontend/images/mainSliders/slider2.jpeg') }}"
-                                    alt="Web Design"></a>
+                            <a href="javascript:void(0)"><img
+                                    src="{{ asset('frontend/images/mainSliders/slider2.jpeg') }}" alt="Web Design"></a>
                         </div>
                         <div class="etl-course-body">
                             <a href="javascript:void(0)" class="etl-course-title">Programming</a>
@@ -309,8 +309,8 @@
                 <div class="col-md-3">
                     <div class="etl-single-course-content">
                         <div class="etl-course-image">
-                            <a href="javascript:void(0)"><img src="{{ asset('frontend/images/mainSliders/slider3.png') }}"
-                                    alt="Web Design"></a>
+                            <a href="javascript:void(0)"><img
+                                    src="{{ asset('frontend/images/mainSliders/slider3.png') }}" alt="Web Design"></a>
                         </div>
                         <div class="etl-course-body">
                             <a href="javascript:void(0)" class="etl-course-title">ITC</a>
@@ -801,18 +801,18 @@
                                             alt="clients"></a>
                                     <a href="javascript:void(0)"><img src="{{ asset('frontend/images/partners/9.png') }}"
                                             alt="clients"></a>
-                                    <a href="javascript:void(0)"><img src="{{ asset('frontend/images/partners/10.png') }}"
-                                            alt="clients"></a>
-                                    <a href="javascript:void(0)"><img src="{{ asset('frontend/images/partners/11.png') }}"
-                                            alt="clients"></a>
-                                    <a href="javascript:void(0)"><img src="{{ asset('frontend/images/partners/12.png') }}"
-                                            alt="clients"></a>
-                                    <a href="javascript:void(0)"><img src="{{ asset('frontend/images/partners/13.png') }}"
-                                            alt="clients"></a>
-                                    <a href="javascript:void(0)"><img src="{{ asset('frontend/images/partners/14.png') }}"
-                                            alt="clients"></a>
-                                    <a href="javascript:void(0)"><img src="{{ asset('frontend/images/partners/15.png') }}"
-                                            alt="clients"></a>
+                                    <a href="javascript:void(0)"><img
+                                            src="{{ asset('frontend/images/partners/10.png') }}" alt="clients"></a>
+                                    <a href="javascript:void(0)"><img
+                                            src="{{ asset('frontend/images/partners/11.png') }}" alt="clients"></a>
+                                    <a href="javascript:void(0)"><img
+                                            src="{{ asset('frontend/images/partners/12.png') }}" alt="clients"></a>
+                                    <a href="javascript:void(0)"><img
+                                            src="{{ asset('frontend/images/partners/13.png') }}" alt="clients"></a>
+                                    <a href="javascript:void(0)"><img
+                                            src="{{ asset('frontend/images/partners/14.png') }}" alt="clients"></a>
+                                    <a href="javascript:void(0)"><img
+                                            src="{{ asset('frontend/images/partners/15.png') }}" alt="clients"></a>
                                 </div>
                             </div>
                             <!--Single tab content end-->
