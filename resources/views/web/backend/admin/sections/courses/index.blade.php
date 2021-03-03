@@ -156,16 +156,16 @@
                                                 <span class="new-control-indicator"></span>
                                             </label>
                                         </div>
-                                        <h4>Name</h4>
+                                        <h4>Course</h4>
                                     </div>
                                     <div class="user-email">
-                                        <h4>Email</h4>
+                                        <h4>Admission</h4>
                                     </div>
                                     <div class="user-location">
-                                        <h4 style="margin-left: 0;">Location</h4>
+                                        <h4 style="margin-left: 0;">Fee</h4>
                                     </div>
                                     <div class="user-phone">
-                                        <h4 style="margin-left: 3px;">Phone</h4>
+                                        <h4 style="margin-left: 3px;">Description</h4>
                                     </div>
                                     <div class="action-btn">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"

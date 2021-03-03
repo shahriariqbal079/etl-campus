@@ -373,7 +373,7 @@
                         </a>
                         <ul class="collapse submenu list-unstyled show" id="dashboard" data-parent="#accordionExample">
                             <li>
-                                <a href="#"> Sales </a>
+                                <a href="{{route('admin.dashboard')}}"> Admin </a>
                             </li>
                             <li class="active">
                                 <a href="#"> Analytics </a>
