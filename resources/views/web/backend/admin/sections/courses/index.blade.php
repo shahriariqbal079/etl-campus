@@ -75,60 +75,146 @@
                                     aria-labelledby="addContactModalTitle" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                         <div class="modal-content">
+
+                                        <form action="{{route('admin.course.store')}}" method="post" enctype="multipart/form-data">
+                                            @csrf
+
                                             <div class="modal-body">
                                                 <i class="flaticon-cancel-12 close" data-dismiss="modal"></i>
                                                 <div class="add-contact-box">
                                                     <div class="add-contact-content">
-                                                        <form id="addContactModalTitle">
+                                                        {{-- <form id="addContactModalTitle"> --}}
                                                             <div class="row">
-                                                                <div class="col-md-6">
+
+                                                                <div class="form-group col-md-6">
+                                                                    <input type="text" class="form-control @error('title') is-invalid @enderror" id="" name="name"
+                                                                        placeholder="Name">
+                                                                    @error('title')
+                                                                    <span class="invalid-feedback" role="alert">
+                                                                        <strong>{{ $message }}</strong>
+                                                                    </span>
+                                                                    @enderror
+                                                                </div>
+                                                                {{-- <div class="col-md-6">
                                                                     <div class="contact-name">
                                                                         <i class="flaticon-user-11"></i>
-                                                                        <input type="text" id="c-name" class="form-control"
-                                                                            placeholder="Name">
+                                                                        <input type="text" id="c-name" class="form-control" name="name"
+                                                                            placeholder="Course Name">
                                                                         <span class="validation-text"></span>
                                                                     </div>
-                                                                </div>
-                                                                <div class="col-md-6">
+                                                                </div> --}}
+                                                                {{-- <div class="col-md-6">
                                                                     <div class="contact-email">
                                                                         <i class="flaticon-mail-26"></i>
-                                                                        <input type="text" id="c-email" class="form-control"
-                                                                            placeholder="Email">
+                                                                        <input type="text" id="c-email" class="form-control" name="fee"
+                                                                            placeholder="Fee">
                                                                         <span class="validation-text"></span>
                                                                     </div>
+                                                                </div> --}}
+
+                                                                <div class="form-group col-md-6">
+                                                                    <input type="text" class="form-control @error('title') is-invalid @enderror" id="" name="fee"
+                                                                        placeholder="Fee">
+                                                                    @error('title')
+                                                                    <span class="invalid-feedback" role="alert">
+                                                                        <strong>{{ $message }}</strong>
+                                                                    </span>
+                                                                    @enderror
                                                                 </div>
                                                             </div>
 
                                                             <div class="row">
-                                                                <div class="col-md-6">
+
+                                                                {{-- <div class="col-md-6">
+                                                                    <div class="contact-name">
+                                                                        <i class="flaticon-user-11"></i>
+                                                                        <input type="date" id="" class="form-control" name="admission_start"
+                                                                            placeholder="Start Date">
+                                                                        <span class="validation-text"></span>
+                                                                    </div>
+                                                                </div> --}}
+                                                                <div class="form-group col-md-6">
+                                                                    <input type="date" class="form-control @error('title') is-invalid @enderror" id="" name="admission_start"
+                                                                        placeholder="Fee">
+                                                                    @error('title')
+                                                                    <span class="invalid-feedback" role="alert">
+                                                                        <strong>{{ $message }}</strong>
+                                                                    </span>
+                                                                    @enderror
+                                                                </div>
+
+                                                                <div class="form-group col-md-6">
+                                                                    <input type="date" class="form-control @error('title') is-invalid @enderror" id="" name="admission_close"
+                                                                        placeholder="Close">
+                                                                    @error('title')
+                                                                    <span class="invalid-feedback" role="alert">
+                                                                        <strong>{{ $message }}</strong>
+                                                                    </span>
+                                                                    @enderror
+                                                                </div>
+                                                                {{-- <div class="col-md-6">
+                                                                    <div class="contact-email">
+                                                                        <i class="flaticon-mail-26"></i>
+                                                                        <input type="date" id="" class="form-control" name="admission_close"
+                                                                            placeholder="Close dat">
+                                                                        <span class="validation-text"></span>
+                                                                    </div>
+                                                                </div> --}}
+
+                                                            </div>
+
+
+
+                                                            <div class="row">
+                                                                {{-- <div class="col-md-6">
                                                                     <div class="contact-occupation">
                                                                         <i class="flaticon-fill-area"></i>
                                                                         <input type="text" id="c-occupation"
-                                                                            class="form-control" placeholder="Occupation">
+                                                                            class="form-control" placeholder="Duration" name="duration">
                                                                     </div>
+                                                                </div> --}}
+                                                                <div class="form-group col-md-6">
+                                                                    <input type="text" class="form-control @error('title') is-invalid @enderror" id="" name="duration"
+                                                                        placeholder="Duration">
+                                                                    @error('title')
+                                                                    <span class="invalid-feedback" role="alert">
+                                                                        <strong>{{ $message }}</strong>
+                                                                    </span>
+                                                                    @enderror
                                                                 </div>
 
-                                                                <div class="col-md-6">
+                                                                {{-- <div class="col-md-6">
                                                                     <div class="contact-phone">
                                                                         <i class="flaticon-telephone"></i>
-                                                                        <input type="text" id="c-phone" class="form-control"
-                                                                            placeholder="Phone">
+                                                                        <input type="file" id="c-phone" class="form-control"
+                                                                            placeholder="Image">
                                                                         <span class="validation-text"></span>
                                                                     </div>
+                                                                </div> --}}
+
+                                                                <div class="form-group col-md-6">
+                                                                    <input type="file" class="form-control @error('title') is-invalid @enderror" id="" name="image"
+                                                                        placeholder="Close">
+                                                                    @error('title')
+                                                                    <span class="invalid-feedback" role="alert">
+                                                                        <strong>{{ $message }}</strong>
+                                                                    </span>
+                                                                    @enderror
                                                                 </div>
+
                                                             </div>
 
                                                             <div class="row">
                                                                 <div class="col-md-12">
                                                                     <div class="contact-location">
                                                                         <i class="flaticon-location-1"></i>
-                                                                        <input type="text" id="c-location"
-                                                                            class="form-control" placeholder="Location">
+                                                                        <input type="text" id="c-location" name="description"
+                                                                            class="form-control" placeholder="Description">
                                                                     </div>
                                                                 </div>
                                                             </div>
 
-                                                        </form>
+                                                        {{-- </form> --}}
                                                     </div>
                                                 </div>
                                             </div>
@@ -138,8 +224,12 @@
                                                 <button class="btn" data-dismiss="modal"> <i class="flaticon-delete-1"></i>
                                                     Discard</button>
 
-                                                <button id="btn-add" class="btn">Add</button>
+                                                <button type="submit" id="btn-add" class="btn">Add</button>
                                             </div>
+
+                                        </form>
+
+
                                         </div>
                                     </div>
                                 </div>
@@ -165,7 +255,7 @@
                                         <h4 style="margin-left: 0;">Fee</h4>
                                     </div>
                                     <div class="user-phone">
-                                        <h4 style="margin-left: 3px;">Description</h4>
+                                        <h4 style="margin-left: 3px;">Duration</h4>
                                     </div>
                                     <div class="action-btn">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -182,6 +272,8 @@
                                 </div>
                             </div>
 
+                            @if ($courses)
+                            @foreach ($courses as $course)
                             <div class="items">
                                 <div class="item-content">
                                     <div class="user-profile">
@@ -191,23 +283,23 @@
                                                 <span class="new-control-indicator"></span>
                                             </label>
                                         </div>
-                                        <img src="{{ asset('backend/img/90x90.jpg') }}" alt="avatar">
+                                        <img height="90" width="90" src="{{ $course->image ? asset("uploads/images/course/$course->image") : asset('backend/img/90x90.jpg') }}" alt="avatar">
                                         <div class="user-meta-info">
-                                            <p class="user-name" data-name="Alan Green">Alan Green</p>
-                                            <p class="user-work" data-occupation="Web Developer">Web Developer</p>
+                                            <p class="user-name" data-name="Alan Green"> {{$course->name}} </p>
+                                            <p class="user-work" data-occupation="Web Developer">Web Developing</p>
                                         </div>
                                     </div>
                                     <div class="user-email">
-                                        <p class="info-title">Email: </p>
-                                        <p class="usr-email-addr" data-email="alan@mail.com">alan@mail.com</p>
+                                        <p class="info-title">Admission: </p>
+                                        <p class="usr-email-addr" data-email="alan@mail.com">{{$course->admission_status == 1 ? "Going" : "Closed"}}</p>
                                     </div>
                                     <div class="user-location">
-                                        <p class="info-title">Location: </p>
-                                        <p class="usr-location" data-location="Boston, USA">Boston, USA</p>
+                                        <p class="info-title">Fee: </p>
+                                        <p class="usr-location" data-location="Boston, USA"> {{$course->fee}} TK.</p>
                                     </div>
                                     <div class="user-phone">
-                                        <p class="info-title">Phone: </p>
-                                        <p class="usr-ph-no" data-phone="+1 (070) 123-4567">+1 (070) 123-4567</p>
+                                        <p class="info-title">Duration: </p>
+                                        <p class="usr-ph-no" data-phone="+1 (070) 123-4567">  {{  $course->duration}} Hours </p>
                                     </div>
                                     <div class="action-btn">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -226,320 +318,14 @@
                                     </div>
                                 </div>
                             </div>
+                                
+                            @endforeach
+                                
+                            @endif
 
-                            <div class="items">
-                                <div class="item-content">
-                                    <div class="user-profile">
-                                        <div class="n-chk align-self-center text-center">
-                                            <label class="new-control new-checkbox checkbox-primary">
-                                                <input type="checkbox" class="new-control-input contact-chkbox">
-                                                <span class="new-control-indicator"></span>
-                                            </label>
-                                        </div>
-                                        <img src="{{ asset('backend/img/90x90.jpg') }}" alt="avatar">
-                                        <div class="user-meta-info">
-                                            <p class="user-name" data-name="Linda Nelson">Linda Nelson</p>
-                                            <p class="user-work" data-occupation="Web Designer">Web Designer</p>
-                                        </div>
-                                    </div>
-                                    <div class="user-email">
-                                        <p class="info-title">Email: </p>
-                                        <p class="usr-email-addr" data-email="linda@mail.com">linda@mail.com</p>
-                                    </div>
-                                    <div class="user-location">
-                                        <p class="info-title">Location: </p>
-                                        <p class="usr-location" data-location="Sydney, Australia">Sydney, Australia</p>
-                                    </div>
-                                    <div class="user-phone">
-                                        <p class="info-title">Phone: </p>
-                                        <p class="usr-ph-no" data-phone="+1 (070) 123-4567">+1 (070) 123-4567</p>
-                                    </div>
-                                    <div class="action-btn">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" class="feather feather-edit-2 edit">
-                                            <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
-                                        </svg>
+                            
 
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" class="feather feather-user-minus delete">
-                                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                            <circle cx="8.5" cy="7" r="4"></circle>
-                                            <line x1="23" y1="11" x2="17" y2="11"></line>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="items">
-                                <div class="item-content">
-                                    <div class="user-profile">
-                                        <div class="n-chk align-self-center text-center">
-                                            <label class="new-control new-checkbox checkbox-primary">
-                                                <input type="checkbox" class="new-control-input contact-chkbox">
-                                                <span class="new-control-indicator"></span>
-                                            </label>
-                                        </div>
-                                        <img src="{{ asset('backend/img/90x90.jpg') }}" alt="avatar">
-                                        <div class="user-meta-info">
-                                            <p class="user-name" data-name="Lila Perry">Lila Perry</p>
-                                            <p class="user-work" data-occupation="UX/UI Designer">UX/UI Designer</p>
-                                        </div>
-                                    </div>
-                                    <div class="user-email">
-                                        <p class="info-title">Email: </p>
-                                        <p class="usr-email-addr" data-email="lila@mail.com">lila@mail.com</p>
-                                    </div>
-                                    <div class="user-location">
-                                        <p class="info-title">Location: </p>
-                                        <p class="usr-location" data-location="Miami, USA">Miami, USA</p>
-                                    </div>
-                                    <div class="user-phone">
-                                        <p class="info-title">Phone: </p>
-                                        <p class="usr-ph-no" data-phone="+1 (070) 123-4567">+1 (070) 123-4567</p>
-                                    </div>
-                                    <div class="action-btn">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" class="feather feather-edit-2 edit">
-                                            <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
-                                        </svg>
-
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" class="feather feather-user-minus delete">
-                                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                            <circle cx="8.5" cy="7" r="4"></circle>
-                                            <line x1="23" y1="11" x2="17" y2="11"></line>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="items">
-                                <div class="item-content">
-                                    <div class="user-profile">
-                                        <div class="n-chk align-self-center text-center">
-                                            <label class="new-control new-checkbox checkbox-primary">
-                                                <input type="checkbox" class="new-control-input contact-chkbox">
-                                                <span class="new-control-indicator"></span>
-                                            </label>
-                                        </div>
-                                        <img src="{{ asset('backend/img/90x90.jpg') }}" alt="avatar">
-                                        <div class="user-meta-info">
-                                            <p class="user-name" data-name="Andy King">Andy King</p>
-                                            <p class="user-work" data-occupation="Web Developer">Project Lead</p>
-                                        </div>
-                                    </div>
-                                    <div class="user-email">
-                                        <p class="info-title">Email: </p>
-                                        <p class="usr-email-addr" data-email="andy@mail.com">andy@mail.com</p>
-                                    </div>
-                                    <div class="user-location">
-                                        <p class="info-title">Location: </p>
-                                        <p class="usr-location" data-location="Tokyo, Japan">Tokyo, Japan</p>
-                                    </div>
-                                    <div class="user-phone">
-                                        <p class="info-title">Phone: </p>
-                                        <p class="usr-ph-no" data-phone="+1 (070) 123-4567">+1 (070) 123-4567</p>
-                                    </div>
-                                    <div class="action-btn">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" class="feather feather-edit-2 edit">
-                                            <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
-                                        </svg>
-
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" class="feather feather-user-minus delete">
-                                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                            <circle cx="8.5" cy="7" r="4"></circle>
-                                            <line x1="23" y1="11" x2="17" y2="11"></line>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="items">
-                                <div class="item-content">
-                                    <div class="user-profile">
-                                        <div class="n-chk align-self-center text-center">
-                                            <label class="new-control new-checkbox checkbox-primary">
-                                                <input type="checkbox" class="new-control-input contact-chkbox">
-                                                <span class="new-control-indicator"></span>
-                                            </label>
-                                        </div>
-                                        <img src="{{ asset('backend/img/90x90.jpg') }}" alt="avatar">
-                                        <div class="user-meta-info">
-                                            <p class="user-name" data-name="Jesse Cory">Jesse Cory</p>
-                                            <p class="user-work" data-occupation="Web Developer">Web Developer</p>
-                                        </div>
-                                    </div>
-                                    <div class="user-email">
-                                        <p class="info-title">Email: </p>
-                                        <p class="usr-email-addr" data-email="jesse@mail.com">jesse@mail.com</p>
-                                    </div>
-                                    <div class="user-location">
-                                        <p class="info-title">Location: </p>
-                                        <p class="usr-location" data-location="Edinburgh, UK">Edinburgh, UK</p>
-                                    </div>
-                                    <div class="user-phone">
-                                        <p class="info-title">Phone: </p>
-                                        <p class="usr-ph-no" data-phone="+1 (070) 123-4567">+1 (070) 123-4567</p>
-                                    </div>
-                                    <div class="action-btn">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" class="feather feather-edit-2 edit">
-                                            <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
-                                        </svg>
-
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" class="feather feather-user-minus delete">
-                                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                            <circle cx="8.5" cy="7" r="4"></circle>
-                                            <line x1="23" y1="11" x2="17" y2="11"></line>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="items">
-                                <div class="item-content">
-                                    <div class="user-profile">
-                                        <div class="n-chk align-self-center text-center">
-                                            <label class="new-control new-checkbox checkbox-primary">
-                                                <input type="checkbox" class="new-control-input contact-chkbox">
-                                                <span class="new-control-indicator"></span>
-                                            </label>
-                                        </div>
-                                        <img src="{{ asset('backend/img/90x90.jpg') }}" alt="avatar">
-                                        <div class="user-meta-info">
-                                            <p class="user-name" data-name="Xavier">Xavier</p>
-                                            <p class="user-work" data-occupation="UX/UI Designer">UX/UI Designer</p>
-                                        </div>
-                                    </div>
-                                    <div class="user-email">
-                                        <p class="info-title">Email: </p>
-                                        <p class="usr-email-addr" data-email="xavier@mail.com">xavier@mail.com</p>
-                                    </div>
-                                    <div class="user-location">
-                                        <p class="info-title">Location: </p>
-                                        <p class="usr-location" data-location="New York, USA">New York, USA</p>
-                                    </div>
-                                    <div class="user-phone">
-                                        <p class="info-title">Phone: </p>
-                                        <p class="usr-ph-no" data-phone="+1 (070) 123-4567">+1 (070) 123-4567</p>
-                                    </div>
-                                    <div class="action-btn">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" class="feather feather-edit-2 edit">
-                                            <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
-                                        </svg>
-
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" class="feather feather-user-minus delete">
-                                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                            <circle cx="8.5" cy="7" r="4"></circle>
-                                            <line x1="23" y1="11" x2="17" y2="11"></line>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="items">
-                                <div class="item-content">
-                                    <div class="user-profile">
-                                        <div class="n-chk align-self-center text-center">
-                                            <label class="new-control new-checkbox checkbox-primary">
-                                                <input type="checkbox" class="new-control-input contact-chkbox">
-                                                <span class="new-control-indicator"></span>
-                                            </label>
-                                        </div>
-                                        <img src="{{ asset('backend/img/90x90.jpg') }}" alt="avatar">
-                                        <div class="user-meta-info">
-                                            <p class="user-name" data-name="Susan">Susan</p>
-                                            <p class="user-work" data-occupation="Project Manager">Project Manager</p>
-                                        </div>
-                                    </div>
-                                    <div class="user-email">
-                                        <p class="info-title">Email: </p>
-                                        <p class="usr-email-addr" data-email="susan@mail.com">susan@mail.com</p>
-                                    </div>
-                                    <div class="user-location">
-                                        <p class="info-title">Location: </p>
-                                        <p class="usr-location" data-location="Miami, USA">Miami, USA</p>
-                                    </div>
-                                    <div class="user-phone">
-                                        <p class="info-title">Phone: </p>
-                                        <p class="usr-ph-no" data-phone="+1 (070) 123-4567">+1 (070) 123-4567</p>
-                                    </div>
-                                    <div class="action-btn">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" class="feather feather-edit-2 edit">
-                                            <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
-                                        </svg>
-
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" class="feather feather-user-minus delete">
-                                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                            <circle cx="8.5" cy="7" r="4"></circle>
-                                            <line x1="23" y1="11" x2="17" y2="11"></line>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="items">
-                                <div class="item-content">
-                                    <div class="user-profile">
-                                        <div class="n-chk align-self-center text-center">
-                                            <label class="new-control new-checkbox checkbox-primary">
-                                                <input type="checkbox" class="new-control-input contact-chkbox">
-                                                <span class="new-control-indicator"></span>
-                                            </label>
-                                        </div>
-                                        <img src="{{ asset('backend/img/90x90.jpg') }}" alt="avatar">
-                                        <div class="user-meta-info">
-                                            <p class="user-name" data-name="Traci Lopez">Traci Lopez</p>
-                                            <p class="user-work" data-occupation="Web Developer">Web Developer</p>
-                                        </div>
-                                    </div>
-                                    <div class="user-email">
-                                        <p class="info-title">Email: </p>
-                                        <p class="usr-email-addr" data-email="traci@mail.com">traci@mail.com</p>
-                                    </div>
-                                    <div class="user-location">
-                                        <p class="info-title">Location: </p>
-                                        <p class="usr-location" data-location="Edinburgh, UK">Edinburgh, UK</p>
-                                    </div>
-                                    <div class="user-phone">
-                                        <p class="info-title">Phone: </p>
-                                        <p class="usr-ph-no" data-phone="+1 (070) 123-4567">+1 (070) 123-4567</p>
-                                    </div>
-                                    <div class="action-btn">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" class="feather feather-edit-2 edit">
-                                            <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" class="feather feather-user-minus delete">
-                                            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                            <circle cx="8.5" cy="7" r="4"></circle>
-                                            <line x1="23" y1="11" x2="17" y2="11"></line>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
 
                     </div>

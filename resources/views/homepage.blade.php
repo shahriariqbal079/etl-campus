@@ -100,15 +100,18 @@
                 <!--Project title area end-->
 
                 <!--Single course area start-->
+
+                @if ($courses)
+                @foreach ($courses as $course)
                 <div class="col-md-3">
                     <div class="etl-single-course-content">
                         <div class="etl-course-image">
                             <a href="javascript:void(0)"><img
-                                    src="{{ asset('frontend/images/mainSliders/slider2.jpeg') }}" alt="Web Design"></a>
+                                    src="{{ $course->image ? asset("uploads/images/course/$course->image") : asset('frontend/images/mainSliders/slider2.jpeg') }}" alt="Web Design"></a>
                         </div>
                         <div class="etl-course-body">
-                            <a href="javascript:void(0)" class="etl-course-title">Website Design</a>
-                            <p>Earum dicta consequuntur neque necessitatibus delectus a repellendus reprehenderit alias!</p>
+                            <a href="javascript:void(0)" class="etl-course-title">{{$course->name}}</a>
+                            <p>{{$course->description}}</p>
                             <a href="javascript:void(0)" class="learn-btn">Learn More</a>
 
                             <div class="etl-course-name-top">
@@ -116,19 +119,23 @@
                                 <span>Fee</span>
                             </div>
                             <div class="etl-course-body-top">
-                                <span>Feb 2, 2021 - Mar 10, 2021</span>
-                                <span>12000Tk.</span>
+                                <span>{{ date('d/m/Y', strtotime($course->start)) }} - {{ date('d/m/Y', strtotime($course->close)) }}</span>
+                                <span>{{$course->fee}}Tk.</span>
                             </div>
                         </div>
                         <div class="etl-course-footer">
-                            <span>Total hours: 50</span>
+                            <span>Total hours: {{$course->duration}}</span>
                             <a href="javascript:void(0)">Enroll Now</a>
                         </div>
                     </div>
                 </div>
+                @endforeach
+                    
+                @endif
+                
                 <!--Single course area end-->
 
-                <!--Single course area start-->
+                {{-- <!--Single course area start-->
                 <div class="col-md-3">
                     <div class="etl-single-course-content">
                         <div class="etl-course-image">
@@ -329,7 +336,7 @@
                         </div>
                     </div>
                 </div>
-                <!--Single course area end-->
+                <!--Single course area end--> --}}
             </div>
         </div>
     </section>

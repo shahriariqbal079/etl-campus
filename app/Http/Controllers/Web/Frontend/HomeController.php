@@ -4,13 +4,15 @@ namespace App\Http\Controllers\Web\Frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Course;
 
 class HomeController extends Controller
 {
 
     public function index()
     {
-        return view('homepage');
+        $courses = Course::get();
+        return view('homepage', compact('courses'));
     }
 
     public function about()

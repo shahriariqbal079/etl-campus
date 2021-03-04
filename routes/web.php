@@ -27,11 +27,9 @@ Route::prefix('admin')->as('admin.')->group(function () {
     Route::get('/logout', 'Auth\AdminLoginController@logout')->name('logout');
     Route::get('/', 'Admin\AdminController@index')->name('dashboard');
 
-
     Route::group(['middleware' => 'auth:admin'], function () {
-    Route::get('/courses', 'Admin\AdminController@courses')->name('courses');
-
-
+        Route::get('/courses', 'Admin\AdminController@courses')->name('courses');
+        Route::post('/course/store', 'Admin\AdminController@courseStore')->name('course.store');
 
     });
 });
