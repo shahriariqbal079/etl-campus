@@ -798,9 +798,9 @@
         </a>
         <div class="wave-5"></div>
         <div class="wave-lost wrp">
-            <span>4</span>
+            <span>5</span>
             <span>0</span>
-            <span>4</span>
+            <span>0</span>
         </div>
         <div class="wave-4"></div>
         <div class="wave-boat">
