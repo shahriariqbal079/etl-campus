@@ -3,9 +3,9 @@
 @section('css_after')
 
     <!-- BEGIN PAGE LEVEL STYLES -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('backend/css/forms/theme-checkbox-radio.css') }}">
-    <link href="{{ asset('backend/plugins/jquery-ui/jquery-ui.min.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('backend/css/apps/contacts.css') }} " rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('backend/admin/css/forms/theme-checkbox-radio.css') }}">
+    <link href="{{ asset('backend/admin/plugins/jquery-ui/jquery-ui.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('backend/admin/css/apps/contacts.css') }} " rel="stylesheet" type="text/css" />
     <!-- END PAGE LEVEL STYLES -->
 
 @endsection
@@ -283,7 +283,7 @@
                                                 <span class="new-control-indicator"></span>
                                             </label>
                                         </div>
-                                        <img height="90" width="90" src="{{ $course->image ? asset("uploads/images/course/$course->image") : asset('backend/img/90x90.jpg') }}" alt="avatar">
+                                        <img height="90" width="90" src="{{ $course->image ? asset("uploads/images/course/$course->image") : asset('backend/admin/img/90x90.jpg') }}" alt="avatar">
                                         <div class="user-meta-info">
                                             <p class="user-name" data-name="Alan Green"> {{$course->name}} </p>
                                             <p class="user-work" data-occupation="Web Developer">Web Developing</p>
@@ -353,6 +353,6 @@
 @endsection
 
 @section('js_after')
-    <script src="{{ asset('backend/plugins/jquery-ui/jquery-ui.min.js') }} "></script>
-    <script src="{{ asset('backend/js/apps/contact.js') }} "></script>
+    <script src="{{ asset('backend/admin/plugins/jquery-ui/jquery-ui.min.js') }} "></script>
+    <script src="{{ asset('backend/admin/js/apps/contact.js') }} "></script>
 @endsection

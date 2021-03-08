@@ -6,21 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <title>CORK Admin - Multipurpose Bootstrap Dashboard Template </title>
-    <link rel="icon" type="image/x-icon" href="{{ asset('backend/img/favicon.ico') }}" />
-    <link href="{{ asset('backend/css/loader.css') }}" rel="stylesheet" type="text/css" />
-    <script src="{{ asset('backend/js/loader.js') }}"></script>
+    <link rel="icon" type="image/x-icon" href="{{ asset('backend/admin/img/favicon.ico') }}" />
+    <link href="{{ asset('backend/admin/css/loader.css') }}" rel="stylesheet" type="text/css" />
+    <script src="{{ asset('backend/admin/js/loader.js') }}"></script>
 
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
-    <link href="{{ asset('backend/bootstrap/css/bootstrap.min.css') }} " rel="stylesheet" type="text/css" />
-    <link href="{{ asset('backend/css/plugins.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('backend/admin/bootstrap/css/bootstrap.min.css') }} " rel="stylesheet" type="text/css" />
+    <link href="{{ asset('backend/admin/css/plugins.css') }}" rel="stylesheet" type="text/css" />
     <!-- END GLOBAL MANDATORY STYLES -->
 
     @yield('css_before')
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
-    <link href="{{ asset('backend/plugins/apex/apexcharts.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('backend/css/dashboard/dash_2.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('backend/admin/plugins/apex/apexcharts.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('backend/admin/css/dashboard/dash_2.css') }}" rel="stylesheet" type="text/css" />
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
 
     @yield('css_after')
@@ -46,7 +46,7 @@
             <ul class="navbar-item theme-brand flex-row  text-center">
                 <li class="nav-item theme-logo">
                     <a href="index.html">
-                        <img src="{{ asset('backend/img/90x90.jpg') }} " class="navbar-logo" alt="logo">
+                        <img src="{{ asset('backend/admin/img/90x90.jpg') }} " class="navbar-logo" alt="logo">
                     </a>
                 </li>
                 <li class="nav-item theme-text">
@@ -76,20 +76,20 @@
                 <li class="nav-item dropdown language-dropdown">
                     <a href="javascript:void(0);" class="nav-link dropdown-toggle" id="language-dropdown"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="{{ asset('backend/img/ca.png') }} " class="flag-width" alt="flag">
+                        <img src="{{ asset('backend/admin/img/ca.png') }} " class="flag-width" alt="flag">
                     </a>
                     <div class="dropdown-menu position-absolute" aria-labelledby="language-dropdown">
                         <a class="dropdown-item d-flex" href="javascript:void(0);"><img
-                                src="{{ asset('backend/img/de.png') }}" class="flag-width" alt="flag"> <span
+                                src="{{ asset('backend/admin/img/de.png') }}" class="flag-width" alt="flag"> <span
                                 class="align-self-center">&nbsp;German</span></a>
                         <a class="dropdown-item d-flex" href="javascript:void(0);"><img
-                                src="{{ asset('backend/img/jp.png') }}" class="flag-width" alt="flag"> <span
+                                src="{{ asset('backend/admin/img/jp.png') }}" class="flag-width" alt="flag"> <span
                                 class="align-self-center">&nbsp;Japanese</span></a>
                         <a class="dropdown-item d-flex" href="javascript:void(0);"><img
-                                src="{{ asset('backend/img/fr.png') }}" class="flag-width" alt="flag"> <span
+                                src="{{ asset('backend/admin/img/fr.png') }}" class="flag-width" alt="flag"> <span
                                 class="align-self-center">&nbsp;French</span></a>
                         <a class="dropdown-item d-flex" href="javascript:void(0);"><img
-                                src="{{ asset('backend/img/ca.png') }}" class="flag-width" alt="flag"> <span
+                                src="{{ asset('backend/admin/img/ca.png') }}" class="flag-width" alt="flag"> <span
                                 class="align-self-center">&nbsp;English</span></a>
                     </div>
                 </li>
@@ -235,7 +235,7 @@
                 <li class="nav-item dropdown user-profile-dropdown">
                     <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="userProfileDropdown"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        <img src="{{ asset('backend/img/90x90.jpg') }}" alt="avatar">
+                        <img src="{{ asset('backend/admin/img/90x90.jpg') }}" alt="avatar">
                     </a>
                     <div class="dropdown-menu position-absolute" aria-labelledby="userProfileDropdown">
                         <div class="">
@@ -269,8 +269,8 @@
                                     </svg> Lock Screen</a>
                             </div>
                             <div class="dropdown-item">
-                                <a class="" href="{{route('admin.logout')}}"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                <a class="" href="{{ route('admin.logout') }}"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                                         class="feather feather-log-out">
                                         <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
@@ -373,7 +373,7 @@
                         </a>
                         <ul class="collapse submenu list-unstyled show" id="dashboard" data-parent="#accordionExample">
                             <li>
-                                <a href="{{route('admin.dashboard')}}"> Admin </a>
+                                <a href="{{ route('admin.dashboard') }}"> Admin </a>
                             </li>
                             <li class="active">
                                 <a href="#"> Analytics </a>
@@ -410,16 +410,16 @@
                         </a>
                         <ul class="collapse submenu list-unstyled" id="app" data-parent="#accordionExample">
                             <li>
-                                <a href="{{route('admin.courses')}}"> Courses </a>
+                                <a href="{{ route('admin.courses') }}"> Courses </a>
                             </li>
                             <li>
                                 <a href="#"> Workshops </a>
                             </li>
-                            
+
                         </ul>
                     </li>
 
-                   
+
 
                     <li class="menu">
                         <a href="#pages" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -485,9 +485,9 @@
                         </ul>
                     </li>
 
-                    
 
-                    
+
+
 
                 </ul>
 
@@ -504,25 +504,25 @@
     <!-- END MAIN CONTAINER -->
 
     <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
-    <script src="{{ asset('backend/js/libs/jquery-3.1.1.min.js') }} "></script>
-    <script src="{{ asset('backend/bootstrap/js/popper.min.js') }}"></script>
-    <script src="{{ asset('backend/bootstrap/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('backend/plugins/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
-    <script src="{{ asset('backend/js/app.js') }}"></script>
+    <script src="{{ asset('backend/admin/js/libs/jquery-3.1.1.min.js') }} "></script>
+    <script src="{{ asset('backend/admin/bootstrap/js/popper.min.js') }}"></script>
+    <script src="{{ asset('backend/admin/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('backend/admin/plugins/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
+    <script src="{{ asset('backend/admin/js/app.js') }}"></script>
     <script>
         $(document).ready(function() {
             App.init();
         });
 
     </script>
-    <script src="{{ asset('backend/js/custom.js') }}"></script>
+    <script src="{{ asset('backend/admin/js/custom.js') }}"></script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
     @yield('js_before')
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-    <script src="{{ asset('backend/plugins/apex/apexcharts.min.js') }}"></script>
-    <script src="{{ asset('backend/js/dashboard/dash_2.js') }}"></script>
+    <script src="{{ asset('backend/admin/plugins/apex/apexcharts.min.js') }}"></script>
+    <script src="{{ asset('backend/admin/js/dashboard/dash_2.js') }}"></script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 
     @yield('js_after')

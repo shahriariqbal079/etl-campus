@@ -449,7 +449,7 @@
 
                             <div class="media">
                                 <div class="w-img">
-                                    <img src="{{ asset('backend/img/90x90.jpg') }}" alt="avatar">
+                                    <img src="{{ asset('backend/admin/img/90x90.jpg') }}" alt="avatar">
                                 </div>
                                 <div class="media-body">
                                     <h6>Jimmy Turner</h6>
@@ -528,7 +528,7 @@
 
                             <div class="media">
                                 <div class="w-img">
-                                    <img src="{{ asset('backend/img/90x90.jpg') }}" alt="avatar">
+                                    <img src="{{ asset('backend/admin/img/90x90.jpg') }}" alt="avatar">
                                 </div>
                                 <div class="media-body">
                                     <h6>Dev Summit - New York</h6>
@@ -539,10 +539,10 @@
                             <div class="card-bottom-section">
                                 <h5>4 Members Going</h5>
                                 <div class="img-group">
-                                    <img src="{{ asset('backend/img/90x90.jpg') }}" alt="avatar">
-                                    <img src="{{ asset('backend/img/90x90.jpg') }}" alt="avatar">
-                                    <img src="{{ asset('backend/img/90x90.jpg') }}" alt="avatar">
-                                    <img src="{{ asset('backend/img/90x90.jpg') }}" alt="avatar">
+                                    <img src="{{ asset('backend/admin/img/90x90.jpg') }}" alt="avatar">
+                                    <img src="{{ asset('backend/admin/img/90x90.jpg') }}" alt="avatar">
+                                    <img src="{{ asset('backend/admin/img/90x90.jpg') }}" alt="avatar">
+                                    <img src="{{ asset('backend/admin/img/90x90.jpg') }}" alt="avatar">
                                 </div>
                                 <a href="javascript:void(0);" class="btn">View Details</a>
                             </div>

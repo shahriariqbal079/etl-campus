@@ -189,8 +189,8 @@
                                         <li><a href="{{ route('feedback') }}">Students Feedback</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="{{route('blog')}}">Blog</a></li>
-                                <li><a href="{{route('faq')}}">FAQ</a></li>
+                                <li><a href="{{ route('blog') }}">Blog</a></li>
+                                <li><a href="{{ route('faq') }}">FAQ</a></li>
                                 <li><a href="javascript:void(0)">Contact</a></li>
                             </ul>
                             <ul class="etl-main-menu-right">
