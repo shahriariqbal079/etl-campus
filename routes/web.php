@@ -46,6 +46,16 @@ Route::get('/home', 'Web\Backend\User\UserController@index')->name('home');
 Route::prefix('user')->as('user.')->group(function () {
     Route::group(['middleware' => 'auth:web'], function () {
 
+        Route::get('/browse-courses', 'Web\Backend\User\UserController@browseCourses')->name('browse-courses');
+        Route::get('/student-dashboard', 'Web\Backend\User\UserController@studentDashboard')->name('student-dashboard');
+        Route::get('/courses', 'Web\Backend\User\UserController@courses')->name('courses');
+        Route::get('/course-preview', 'Web\Backend\User\UserController@coursePreview')->name('course-preview');
+        Route::get('/take-quiz', 'Web\Backend\User\UserController@takeQuiz')->name('take-quiz');
+        Route::get('/my-quizzes', 'Web\Backend\User\UserController@myQuizzes')->name('my-quizzes');
+        Route::get('/quiz-result', 'Web\Backend\User\UserController@quizResult')->name('quiz-result');
+        Route::get('/skill-assessment', 'Web\Backend\User\UserController@skillAssessment')->name('skill-assessment');
+        Route::get('/skill-result', 'Web\Backend\User\UserController@skillResult')->name('skill-result');
+
     });
 });
 

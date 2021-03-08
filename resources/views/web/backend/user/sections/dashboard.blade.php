@@ -1,6 +1,6 @@
 @extends('web.backend.user.layouts.master')
 @section('content')
-    <div class="mdk-drawer-layout__content page-content">
+    {{-- <div class="mdk-drawer-layout__content page-content"> --}}
         <!-- Header -->
         <!-- // END Header -->
 
@@ -1245,5 +1245,5 @@
         <!-- // END Page Content -->
         <!-- Footer -->
         <!-- // END Footer -->
-    </div>
+    {{-- </div> --}}
 @endsection
