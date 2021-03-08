@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Web\Backend\Admin;
 
 use App\Course;
 use App\Http\Controllers\Controller;
@@ -27,13 +27,13 @@ class AdminController extends Controller
     public function courseStore(Request $request)
     {
         /* $this->validate($request, [
-            'email' => 'required|email|unique:users,email',
-            'password' => 'required|min:8',
-            'name' => 'required',
-            'phone' => 'numeric',
-            'photo' => 'max:5120|mimes:jpg,png,jpeg',
+        'email' => 'required|email|unique:users,email',
+        'password' => 'required|min:8',
+        'name' => 'required',
+        'phone' => 'numeric',
+        'photo' => 'max:5120|mimes:jpg,png,jpeg',
         ]); */
-        // return $request; 
+        // return $request;
 
         if ($request->hasFile('image')) {
             $extension = $request->image->getClientOriginalExtension();
