@@ -44,6 +44,8 @@ Auth::routes();
 
 Route::get('/home', 'Web\Backend\User\UserController@index')->name('home');
 Route::prefix('user')->as('user.')->group(function () {
+    Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+
     Route::group(['middleware' => 'auth:web'], function () {
 
         Route::get('/browse-courses', 'Web\Backend\User\UserController@browseCourses')->name('browse-courses');

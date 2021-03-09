@@ -274,10 +274,9 @@
                             <a class="dropdown-item" href="edit-account.html">Edit Account</a>
                             <a class="dropdown-item" href="billing.html">Billing</a>
                             <a class="dropdown-item" href="billing-history.html">Payments</a>
-                            <form action="{{ route('logout') }}" method="post">
-                                @csrf
-                                <button type="submit" class="dropdown-item">Logout</button>
-                            </form>
+
+                            <a href="{{ route('user.logout') }}" class="dropdown-item">Logout</a>
+
                         </div>
                     </div>
                 </div>
