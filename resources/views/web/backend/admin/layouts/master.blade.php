@@ -537,7 +537,7 @@
         });
 
     </script>
-    <script src="{{asset('backend/admin/plugins/highlight/highlight.pack.js')}}"></script>
+    <script src="{{ asset('backend/admin/plugins/highlight/highlight.pack.js') }}"></script>
 
     <script src="{{ asset('backend/admin/js/custom.js') }}"></script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->

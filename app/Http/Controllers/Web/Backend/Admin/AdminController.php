@@ -26,6 +26,7 @@ class AdminController extends Controller
 
     public function courseStore(Request $request)
     {
+        return $request;
         /* $this->validate($request, [
         'email' => 'required|email|unique:users,email',
         'password' => 'required|min:8',
