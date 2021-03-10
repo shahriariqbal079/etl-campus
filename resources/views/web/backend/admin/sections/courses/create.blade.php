@@ -81,8 +81,8 @@
                                 <label> <i> Admission Status </i></label> <br>
                                 <select class="selectpicker form-control" multiple data-selected-text-format="count > 3"
                                     name="admission_status">
-                                    <option> Admission Going </option>
-                                    <option> Admission Closed </option>
+                                    <option value="1"> Admission Going </option>
+                                    <option value="0"> Admission Closed </option>
 
                                 </select>
                             </div>

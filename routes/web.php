@@ -76,7 +76,8 @@ Route::prefix('admin')->as('admin.')->group(function () {
 
         Route::get('/courses', 'Web\Backend\Admin\AdminController@courses')->name('courses');
         Route::get('/course/create', 'Web\Backend\Admin\CourseController@create')->name('course.create');
-        Route::post('/course/store', 'Web\Backend\Admin\AdminController@courseStore')->name('course.store');
+        // Route::post('/course/store', 'Web\Backend\Admin\AdminController@courseStore')->name('course.store');
+        Route::post('/course/store', 'Web\Backend\Admin\CourseController@store')->name('course.store');
 
     });
 });

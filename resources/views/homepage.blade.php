@@ -111,7 +111,7 @@
                         </div>
                         <div class="etl-course-body">
                             <a href="javascript:void(0)" class="etl-course-title">{{$course->name}}</a>
-                            <p>{{$course->description}}</p>
+                            <p>{!! $course->description !!}</p>
                             <a href="javascript:void(0)" class="learn-btn">Learn More</a>
 
                             <div class="etl-course-name-top">
