@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Course;
+use App\CourseCategory;
 
 class CourseController extends Controller
 {
@@ -17,7 +18,8 @@ class CourseController extends Controller
 
     public function create()
     {
-        return view('web.backend.admin.sections.courses.create');
+        $categories = CourseCategory::get();
+        return view('web.backend.admin.sections.courses.create', compact('categories'));
     }
 
     public function store(Request $request)
@@ -51,6 +53,8 @@ class CourseController extends Controller
         return redirect(route('admin.courses'));
     }
 
+    
+
     public function show($id)
     {
         //
@@ -69,5 +73,15 @@ class CourseController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+    public function categoryStore(Request $request) {
+        CourseCategory::create([
+            'category' => $request->category
+            
+        ]);
+
+        return redirect()->back();
     }
 }

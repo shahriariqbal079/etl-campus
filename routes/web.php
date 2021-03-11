@@ -79,5 +79,8 @@ Route::prefix('admin')->as('admin.')->group(function () {
         // Route::post('/course/store', 'Web\Backend\Admin\AdminController@courseStore')->name('course.store');
         Route::post('/course/store', 'Web\Backend\Admin\CourseController@store')->name('course.store');
 
+
+        Route::post('/category/store', 'Web\Backend\Admin\CourseController@categoryStore')->name('category.store');
+
     });
 });

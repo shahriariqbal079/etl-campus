@@ -101,11 +101,7 @@
 
 
                         <div class="widget-content widget-content-area">
-                            <textarea id="summernote" name="description">
-
-                                                                </textarea>
-
-
+                            <textarea id="summernote" name="description"> </textarea>
                         </div>
 
 
@@ -200,23 +196,16 @@
 
 
                             <div class="form-group mb-4">
-                                <label for="inputAddress2"> <i> Course Category </i> </label> <br>
+                                <label for="inputAddress2"> <i> Select Category / <a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#exampleModal" >Add New Category</a> </i> </label> <br>
                                 <select class="selectpicker form-control" name="category">
-                                    <option>Mustard</option>
-                                    <option>Ketchup</option>
-                                    <option>Relish</option>
-                                    <option>Mayonnaise</option>
-                                    <option>Barbecue Sauce</option>
-                                    <option>Salad Dressing</option>
-                                    <option>Tabasco</option>
-                                    <option>Salsa</option>
-                                    <option>Mustard</option>
-                                    <option>Ketchup</option>
-                                    <option>Relish</option>
-                                    <option data-divider="true">divider</option>
-                                    <option>Mayonnaise</option>
-                                    <option>Barbecue Sauce</option>
-                                    <option>Salad Dressing</option>
+                                    @if ($categories)
+                                        @foreach ($categories as $category)
+                                            <option value="{{ $category->id }}">{{ $category->category }}</option>
+
+                                        @endforeach
+
+                                    @endif
+
                                 </select>
                             </div>
                             <div class="form-group">
@@ -271,6 +260,35 @@
         </div>
 
     </form>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Category</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+            <form  action="{{ route('admin.category.store') }}" method="POST" enctype="multipart/form-data">
+                @csrf
+            <div class="modal-body">
+                <div class="form-group col-md-12 mb-1">
+                    <label> <i> Category Name: </i></label>
+                    <input type="text" class="form-control" 
+                        name="category" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Discard</button>
+                <button type="submit" class="btn btn-primary">Add</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 @endsection
 
